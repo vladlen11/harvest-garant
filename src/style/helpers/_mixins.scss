@@ -1,0 +1,58 @@
+$xs-719: '(max-width: 719px)';
+$xs-660: '(max-width: 660px)';
+$xs-640: '(max-width: 640px)';
+$xs-619: '(max-width: 619px)';
+$xs-600: '(max-width: 600px)';
+$xs-584: '(max-width: 584px)';
+$xs-519: '(max-width: 519px)';
+$xs-480: '(max-width: 480px)';
+$xs-425: '(max-width: 425px)';
+$xs-388: '(max-width: 388px)';
+$xs-359: '(max-width: 359px)';
+$xs-min: '(min-width: 768px)';
+$xs-max: '(max-width: 767px)';
+$xs-584-991: '(min-width: 584px) and (max-width: 991px)';
+$xs-481-767: '(min-width: 481px) and (max-width: 767px)';
+$xs-585-767: '(min-width: 585px) and (max-width: 767px)';
+$xs-389-584: '(min-width: 389px) and (max-width: 584px)';
+$small: '(min-width: 768px) and (max-width: 991px)';
+$small-max: '(max-width: 991px)';
+$small-min: '(min-width: 992px)';
+$small-medium: '(min-width: 768px) and (max-width: 1199px)';
+$medium: '(min-width: 992px) and (max-width: 1199px)';
+$medium-max: '(max-width: 1199px)';
+$medium-min: '(min-width: 1200px)';
+$lg-1420: '(min-width: 1420px)';
+$lg-1420-max: '(max-width: 1420px)';
+
+@mixin respond-to($media) {
+	@media only screen and #{$media} {
+		@content;
+	}
+}
+
+@mixin titleTempl {
+	font-size: 60px;
+	line-height: 64px;
+	color: $title;
+	font-weight: bold;
+	text-align: center;
+}
+
+@mixin smallTitle {
+	font-size: 24px;
+	color: $h-color;
+	font-weight: 400;
+}
+
+@mixin listIcon {
+	position: relative;
+	padding: 0 0 0 27px;
+	&:before {
+		position: absolute;
+		left: 0;
+		content: "\f056";
+		font-family: $fontAw;
+		color: $red;
+	}
+}

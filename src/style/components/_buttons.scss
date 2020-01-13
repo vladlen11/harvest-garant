@@ -1,0 +1,96 @@
+// .c_btn--green,
+// .c_btn--title,
+// .c_btn--green-empty {
+//   background-color: $green;
+//   box-shadow: 0px 4px 0px 0px rgba(90, 156, 59, 0.004);
+//   text-align: center;
+//   color: #fff;
+//   border-bottom: 4px solid #5a9c3b;
+//   transition: 0.3s all;
+//   text-transform: uppercase;
+//   letter-spacing: 0.25em;
+//   font-weight: bold;
+//   i {
+//   	transition: 0.3s all;
+//   	margin-left: 20px;
+//   }
+// }
+// .c_btn--green-empty {
+//   background-color: #fff;
+//   border: 2px solid $green;
+//   color: $green;
+// }
+// .c_btn--title {
+//   background-color: $title;
+//   border-color: #232423;
+// }
+// .c_btn--green:hover,
+// .c_btn--title:hover {
+// 	background-color: lighten($green, 5%);
+//   color: #fff;
+// 	i {
+//   	margin-left: 30px;
+//   }
+// }
+// .c_btn--green-empty:hover {
+//   color: darken($green, 5%);
+//   border-color: lighten($green, 10%);
+// }
+// .c_btn--title:hover {
+//   background-color: lighten($title, 5%);
+// }
+// .c_btn--green:active,
+// .c_btn--title:active {
+// 	position: relative;
+// 	top: 1px;
+// 	background-color: darken($green, 3%);
+// 	color: #fff;
+// 	border-bottom-color: darken($green, 3%);
+// 	i {
+//   	margin-left: 35px;
+//   }
+// }
+// .c_btn--green-empty:active {
+//   color: lighten($green, 10%);
+//   border-color: darken($green, 5%);
+//   position: relative;
+//   top: 1px;
+// }
+// .c_btn--title:active {
+//   background-color: darken($title, 3%);
+//   border-bottom-color: darken($title, 3%);
+// }
+// .c_btn--green:visited,
+// .c_btn--title:visited,
+// .c_btn--green:focus,
+// .c_btn--title:focus {
+// 	color: #fff;
+// }
+// .c_btn--arrow {
+// 	position: relative;
+// }
+// .c-link--more {
+//   color: $purple;
+//   text-decoration: none;
+//   transition: 0.3s all;
+//   i {
+//     margin-left: 7px;
+//     transition: 0.3s all;
+//   }
+// }
+// .c-link--more:hover {
+//   text-decoration: underline;
+//   i {
+//     margin-left: 14px;
+//   }
+// }
+// .c-link--more:active {
+//   text-decoration: none;
+//   color: lighten($purple, 7%);
+//   i {
+//     margin-left: 20px;
+//   }
+// }
+// .c-link--more:visited {
+//   color: $purple;
+// }

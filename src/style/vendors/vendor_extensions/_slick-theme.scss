@@ -1,0 +1,156 @@
+.c_slider {
+	*{
+		outline: none;
+	}
+	p {
+		text-align: center;
+	}
+}
+.slick-next:before,
+.slick-prev:before {
+	font-size: 14px;
+	opacity: 1;
+	color: $green;
+}
+.slick-prev:before {
+	content: '\f177';
+	font-family: 'FontAwesome';
+}
+.slick-next:before {
+	content: '\f178';
+	font-family: 'FontAwesome';
+}
+.slick-slide {
+	img {
+		display: inline;
+	}
+}
+.avoid__item.slick-center {
+	opacity: 1;
+}
+.slick-next,
+.slick-prev {
+	top: auto;
+	bottom: -16px;
+	z-index: 5;
+  @include respond-to($small-max) {
+		bottom: -46px;
+	}
+}
+
+.slick-next {
+	right: 27px;
+}
+.slick-prev {
+	left: auto;
+	right: 73px;
+}
+.slick-dots {
+	bottom: 0;
+	text-align: left;
+	padding: 7px 0 0 25px;
+	background-color: #fff;
+	width: 240px;
+	@include respond-to($medium-max) {
+		padding: 7px 0 0 10px;
+		width: 170px;
+	}
+	@include respond-to($small-max) {
+		bottom: -32px;
+	}
+	@include respond-to($xs-388) {
+		width: 145px;
+		padding: 7px 0 0 5px;
+	}
+}
+.slick-dots li {
+	height: 2px;
+	width: 30px;
+	margin: 0 5px;
+	@include respond-to($medium-max) {
+		width: 20px;
+		margin: 0 4px;
+	}
+	@include respond-to($xs-388) {
+		width: 15px;
+	}
+}
+.slick-dots li button {
+	height: 0;
+	width: 0;
+}
+.slick-dots li button:before {
+	position: absolute;
+	top: 6;
+	left: 0;
+	content: "";
+	display: inline-block;
+	width: 30px;
+	height: 2px;
+	background-color: $title;
+	opacity: 1;
+	@include respond-to($medium-max) {
+		width: 20px;
+	}
+}
+.slick-dots li.slick-active button:before {
+	background-color: $green;
+	opacity: 1;
+}
+.c_slider__counter {
+	position: absolute;
+	width: 200px;
+	height: 16px;
+	padding: 0 0 0 10px;
+	bottom: 0px;
+	background-color: #fff;
+	right: 0px;
+	font-size: 14px;
+	font-weight: bold;
+	@include respond-to($medium-max) {
+		width: 170px;
+	}
+	@include respond-to($small-max) {
+		bottom: -30px;
+	}
+	@include respond-to($xs-388) {
+		width: 150px;
+		padding: 0;
+	}
+}
+.c_slider {
+	img {
+		height: auto;
+		width: 100%;
+	}
+}
+.c_slider:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	display: block;
+	border: 1px solid $l-border;
+	border-top: none;
+	height: 60px;
+	bottom: -26px;
+	@include respond-to($small-max) {
+		height: 50px;
+		bottom: -50px;
+	}
+}
+.c_slider__txt {
+	position: relative;
+	top: 17px;
+	height: 24px;
+	@include respond-to($small-max) {
+		display: none;
+	}
+}
+.slick-dotted.slick-slider {
+	margin-top: 53px;
+	margin-bottom: 79px;
+}
+.slider-rev.slick-dotted.slick-slider {
+	margin-top: 53px;
+	margin-bottom: 83px;
+}
