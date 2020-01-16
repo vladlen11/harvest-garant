@@ -6,6 +6,7 @@ $(document).ready(function() {
     infinite: true,
     dots: false,
     slidesToShow: 1,
+    fade:true,
     responsive: [{
       breakpoint: 2560,
       settings: {
