@@ -6,7 +6,11 @@
         text-align: center;
     }
 }
-
+.slick-list {
+    .slick-loading & {
+        background: #fff ;
+    }
+}
 .slick-next:before,
 .slick-prev:before {
     font-size: 14px;
