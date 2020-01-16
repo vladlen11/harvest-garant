@@ -7,6 +7,7 @@
 @import "vendors/_hamburgers.min";
 @import "vendors/_slick";
 @import "vendors/_slick-theme";
+@import "vendors/_magnific-popup";
 // @import "vendors/vendor_extensions/_bootstrap";
 // @import "vendors/vendor_extensions/_font-awesome";
 // @import "vendors/vendor_extensions/_hamburgers";
@@ -15,7 +16,7 @@
 // @import "layout/_header";
 @import "layout/_header";
 @import "layout/_main";
-@import "layout/_footer";
+//@import "layout/_footer";
 @import "components/_sprite";
 @import "components/_buttons";
 @import "components/_text";
@@ -717,33 +718,37 @@ a {
 }
 
 .contactUs {
-    //padding: 60px 0;
+    padding: 100px 0;
 
-    
     &__content {
-        padding: 0 0 0 60px;
+        padding: 0 0 0 120px;
+        margin-bottom: 98px;
     }
 
     &__slider {
 
         //max-width: 900px;
         width: 100%;
-        margin: 0 auto 100px;
+        margin: 0 auto 82px;
 
 
         .item {
             position: relative;
             &__title {
-                font-size: 38px;
+                font-size: 50px;
                 font-weight: 900;
                 position: absolute;
-                top: 0;
+                top: 44px;
             }
             &__text {
                 font-size: 25px;
-                padding: 126px 200px 50px;
+                padding: 130px 250px 50px;
                 margin: 0 60px;
                 background: #a5b4c6;
+                text-align: left;
+                p {
+                    text-align: left;
+                }
             }
 
             .empty {
@@ -821,7 +826,7 @@ a {
             border-right-color: #111516;
             border-top-color: #9aa3a6;
             border-left-color: #9aa3a6;
-            padding: 20px 30px;
+            padding: 24px 50px;
         }
     }
 
@@ -831,6 +836,7 @@ a {
             margin-bottom: 60px;
             img {
                 height: 100%;
+                width: 100%;
             }
         }
         .btn-about {
@@ -843,8 +849,74 @@ a {
             border-right-color: #111516;
             border-top-color: #9aa3a6;
             border-left-color: #9aa3a6;
-            padding: 20px 30px;
+            padding: 24px 50px;
             text-decoration: none;
         }
+    }
+}
+
+.gallery {
+    margin-bottom: 110px;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px;
+
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .item {
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.footer {
+
+    &__wrap {
+        display: flex;
+        margin-bottom: 26px;
+    }
+    &__logo {
+        margin-left: 175px;
+        margin-right: 68px;
+
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        &-item {
+            &.title {
+                font-weight: 400;
+            }
+
+            font-weight: 300;
+            font-size: 25px;
+            color: #2d3940;
+
+            a {
+                display: inline-block;
+                color: #2d3940;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .copyright {
+        font-size: 25px;
+        color: #2d3940;
+        text-align: center;
+        font-weight: 300;
     }
 }
