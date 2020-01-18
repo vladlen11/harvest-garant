@@ -7,7 +7,7 @@
 @import "vendors/_slick";
 @import "vendors/_slick-theme";
 @import "vendors/_magnific-popup";
-// @import "vendors/vendor_extensions/_bootstrap";
+ @import "vendors/vendor_extensions/_bootstrap";
  @import "vendors/vendor_extensions/_slick-theme";
 @import "base/_typography";
 
@@ -39,6 +39,8 @@ section {
     position: relative;
     padding-top: 75px;
     padding-bottom: 150px;
+    @include respond-to($medium-max) {
+    }
 
     &:before {
         content: '';
@@ -176,6 +178,9 @@ section {
         display: flex;
         width: 100%;
         justify-content: flex-end;
+        @include respond-to($xs-max) {
+            flex-direction: column-reverse;
+        }
     }
 
     &__list {
@@ -185,9 +190,19 @@ section {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        @include respond-to($xs-max) {
+            align-items: flex-start;
+        }
     
         &-item {
             margin-bottom: 110px;
+            @include respond-to($small-max) {
+                margin-bottom: 60px;
+            }
+            @include respond-to($xs-max) {
+                width: 100%;
+                margin-bottom: 30px;
+            }
 
             h3 {
                 margin-bottom: 14px;
@@ -195,27 +210,63 @@ section {
                 color: #2b363d;
                 font-weight: 500;
                 text-transform: uppercase;
+                @include respond-to($medium-max) {
+                    font-size: 28px;
+                }
+                @include respond-to($xs-max) {
+                    text-align: center;
+                }
             }
             p {
                 margin: 0;
                 padding: 0;
                 font-size: 25px;
                 color: #2b363d;
+                @include respond-to($medium-max) {
+                    font-size: 20px;
+                }
             }
 
 
             &:nth-child(1) {
                 margin-right: 62px;
+                @include respond-to($xs-max) {
+                    margin-right: 0;
+                }
+
             }
             &:nth-child(2) {
                 margin-right: 140px;
+                @include respond-to($small-max) {
+                    margin-right: 20px;
+                }
+                @include respond-to($xs-max) {
+                    margin-right: 0;
+                }
             }
             &:nth-child(3) {
                 margin-right: 228px;
+                @include respond-to($small-max) {
+                    margin-right: 20px;
+                }
+                @include respond-to($xs-max) {
+                    margin-right: 0;
+                }
             }
             &:nth-child(4) {
                 margin-top: -142px;
                 margin-right: -350px;
+
+                @include respond-to($medium-max) {
+                    margin-right: -250px;
+                }
+                @include respond-to($small-max) {
+                    margin-right: -250px;
+                    margin-top: 0;
+                }
+                @include respond-to($xs-max) {
+                    margin-right: 0;
+                }
             }
         }
     }
@@ -223,6 +274,24 @@ section {
     &__img {
         margin-right: 64px;
         margin-top: 30px;
+        @include respond-to($medium-max) {
+            margin-right: 0;
+            width: 250px;
+            
+        }
+        @include respond-to($xs-max) {
+            max-width: 350px;
+            width: 100%;
+            margin: 0 auto 20px;
+            padding: 0 10px;
+        }
+        img {
+            @include respond-to($medium-max) {
+                width: 100%;
+                margin-top: 100px;
+
+            }
+        }
     }
 }
 
