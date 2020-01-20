@@ -169,6 +169,7 @@
                             Из низкоуглеродистой <br>  проволоки для заборов
                         </span>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -177,7 +178,7 @@
     <section class="assortment">
         <div class="container">
             <div class="row">
-                <div class="assortment__list">
+                <div class="assortment__list desctop">
                     <div class="assortment__list-item">
                         <span class="triangle-left-top"></span>
                         <span class="triangle-right-bottom"></span>
@@ -225,6 +226,96 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="assortment__list mobile">
+                    <div class="assortment__list-img">
+                        <img src="img/assortment-1.jpg" alt="alt">
+                    </div>
+
+                    <div class="assortment__list-top">
+                        <div class="item">
+                            <div class="price">
+                                858 грн
+                            </div>
+
+                            <div class="title">
+                                50х50х4 мм
+                                без покрытия
+                                в уголке
+                            </div>
+
+                        </div>
+                        <div class="item">
+                            <div class="price">
+                                1290 грн
+                            </div>
+
+                            <div class="title">
+                                50х50х4 мм
+                                оцинкованная
+                                в уголке
+                                покраска ПВХ
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="assortment__list-bottom">
+                        <div class="item">
+
+                            <div class="title">
+                                50х50х4 мм
+                                без покрытия
+                                в уголке
+                                покраска ПВХ
+                            </div>
+
+                            <div class="price">
+                                1188 грн
+                            </div>
+
+                        </div>
+
+                        <div class="item">
+
+                            <div class="title">
+                                50х50х4 мм
+                                без покрытия
+                            </div>
+
+                            <div class="price">
+                                356 грн
+                            </div>
+
+                        </div>
+
+                        <div class="item">
+
+                            <div class="title">
+                                50х50х4 мм оцинкованная
+                                в уголке
+                            </div>
+
+                            <div class="price">
+                                960 грн
+                            </div>
+
+                        </div>
+                        <div class="item">
+
+                            <div class="title">
+                                50х50х4 мм оцинкованная
+                            </div>
+
+                            <div class="price">
+                                458 грн
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
@@ -241,7 +332,7 @@
                     </p>
                 </div>
 
-                <div class="popular__gallery">
+                <div class="popular__gallery desctop">
                     <div class="popular__gallery-item item-1">
                         <img src="img/popular-1.jpg" alt="alt">
                         <a href="https://metal-shop.com.ua/setka-kanilirovannaja-505050-ocinkovannaja/" class="text">
@@ -264,10 +355,28 @@
                         </a>
                     </div>
                 </div>
+
+                <div class="popular__gallery mobile">
+                    <div class="popular__gallery-img">
+                        <img src="img/popular2.jpg" alt="alt">
+
+                    </div>
+                    <div class="popular__gallery-btn">
+                        <a href="https://metal-shop.com.ua/setka-kanilirovannaja-505050-ocinkovannaja/" class="btn-link">
+                            50х50х5 мм  оцинкованная
+                        </a>
+                        <a href="Ссылка 50х50х4 мм оцинкованная - https://metal-shop.com.ua/setka-kanilirovannaja-505040-ocinkovannaja/" target="_blank" class="btn-link">
+                            50х50х4 мм  оцинкованная
+                        </a>
+                        <a href="https://metal-shop.com.ua/1239-1/" target="_blank" class="btn-link">40х40х3 мм  оцинкованная</a>
+                        <a href=" https://metal-shop.com.ua/setka-kanilirovannaja-505040-ocinkovannaja-1/" target="_blank" class="btn-link">
+                            60х60х4 мм оцинкованная
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
 
     <section class="contactUs">
         <div class="container">
@@ -295,18 +404,18 @@
                         </div>
                     </div>
                     <div class="contactUs__wrap">
-                        <form class="contactUs__form">
+                        <form class="contactUs__form" action="send.php" method="post">
                             <label class="label">
-                                <input type="text" placeholder="Имя">
+                                <input type="text" placeholder="Имя" name="Name">
                             </label>
                             <label class="label">
-                                <input type="text" placeholder="+380...">
+                                <input type="text" placeholder="+380..." name="Phone">
                             </label>
                             <label class="label textarea-wrap" >
-                                <textarea type="text" id="textarea" placeholder="Какую сетку хотите?"></textarea>
+                                <textarea type="text" id="textarea" placeholder="Какую сетку хотите?" name="Message"></textarea>
                             </label>
 
-                            <button class="submit">Отправить</button>
+                            <input type="submit" name="submit" class="submit" value="Отправить">
                         </form>
 
                         <div class="contactUs__aboutUs">
@@ -315,6 +424,13 @@
                                 <img src="img/about-us-img.jpg" alt="alt">
                             </div>
 
+                            <div class="contactUs__aboutUs-info">
+                                <p class="item">Покупка <br> канилированной <br> сетки </p>
+                                <p class="item">и оформление <br> в полноценный забор <br> в одной компании </p>
+                            </div>
+                            <div class="contactUs__aboutUs-descr">
+                                это экономия вашего бюждета
+                            </div>
                             <a href="http://harvest-garant.com.ua/home/about.html" target="_blank" class="btn-about">
                                 Познакомиться с компанией
                             </a>

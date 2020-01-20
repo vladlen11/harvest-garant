@@ -736,6 +736,15 @@ section {
                 }
                 @include respond-to($xs-max) {
                     position: relative;
+                    display: inline-block;
+                    width: 100%;
+                    font-size: 21px;
+                    font-style: italic;
+                }
+                br {
+                    @include respond-to($xs-max) {
+                        display: none;
+                    }
                 }
                 &:nth-child(1) {
                     top: 136px;
@@ -815,13 +824,42 @@ section {
         width: 100%;
         flex-wrap: wrap;
 
+        &.desctop {
+            @include respond-to($medium-max) {
+                max-width: 970px;
+                margin: 0 auto;
+            }
+            @include respond-to($small-max) {
+                display: none;
+            }
+        }
+        &.mobile {
+            display: none;
+            @include respond-to($small-max) {
+                display: block;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+
+        &-img {
+            max-width: 500px;
+
+            img  {
+                width: 100%;
+            }
+
+        }
+
         &-item {
             width: 50%;
             height: 460px;
             position: relative;
             display: flex;
             justify-content: space-between;
-
+            @include respond-to($medium-max) {
+                height: 380px;
+            }
 
             .triangle-left-top {
                 position: absolute;
@@ -834,7 +872,9 @@ section {
                 z-index: 0;
                 background: url("../img/left-top.png");
                 background-size: cover;
+                @include respond-to($medium-max) {
 
+                }
             }
 
             .triangle-left-bottom {
@@ -848,9 +888,11 @@ section {
                 z-index: 0;
                 background: url("../img/left-bottom.png");
                 background-size: cover;
-
+                @include respond-to($medium-max) {
+                    top: 30px;
+                    left: -30px;
+                }
             }
-
 
             .triangle-right-bottom {
                 position: absolute;
@@ -864,6 +906,7 @@ section {
                 background: url("../img/right-bottom.png");
                 background-size: cover;
             }
+
             .triangle-right-top {
                 position: absolute;
                 width: 100%;
@@ -887,7 +930,10 @@ section {
                     font-weight: 300;
                     margin-top: 84px;
                     margin-left: 70px;
-
+                    @include respond-to($medium-max) {
+                        margin-top: 50px;
+                        margin-left: 50px;
+                    }
                 }
 
                 &-2 {
@@ -897,6 +943,10 @@ section {
                     position: relative;
                     margin-top: 216px;
                     margin-right: 36px;
+                    @include respond-to($medium-max) {
+                        margin-top: 188px;
+                        margin-right: 18px;
+                    }
                 }
                 &-3 {
                     color: #2d3940;
@@ -904,11 +954,17 @@ section {
                     font-weight: 300;
                     margin-left: 58px;
                     position: relative;
+                    @include respond-to($medium-max) {
+                        font-size: 25px;
+                    }
                     img {
                         max-width: 530px;
                         margin-right: -60px;
                         margin-top: -60px;
                         float: right;
+                        @include respond-to($medium-max) {
+                           height: 380px;
+                        }
                     }
                 }
                 &-4 {
@@ -918,6 +974,10 @@ section {
                     margin-top: 128px;
                     margin-left: 215px;
                     position: relative;
+                    @include respond-to($medium-max) {
+                        margin-top: 90px;
+                        margin-left: 118px;
+                    }
                 }
 
                 &-5 {
@@ -928,7 +988,10 @@ section {
                     font-weight: 300;
                     margin-top: 280px;
                     margin-left: 60px;
-
+                    @include respond-to($medium-max) {
+                        margin-top: 230px;
+                        margin-left: 16px;
+                    }
                 }
                 &-6 {
                     color: #2d3940;
@@ -937,10 +1000,124 @@ section {
                     position: relative;
                     margin-top: 66px;
                     margin-right: 28px;
+                    @include respond-to($medium-max) {
+                        margin-top: 50px;
+                        margin-right: 28px;
+                    }
                 }
             }
 
+        }
 
+        &-top {
+            position: relative;
+            margin-bottom: 40px;
+            padding-top: 15px;
+
+            &:before {
+                content: '';
+                background: #a5b3c5;
+                display: inline-block;
+                width: 200%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+
+            .item {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                padding-left: 12px;
+                position: relative;
+                height: 100px;
+                margin-bottom: 32px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    display: inline-block;
+                    top: 0;
+                    left: 0;
+                    overflow: hidden;
+                    z-index: -1;
+                    background: url("../img/aasortment2.png");
+                    background-repeat: no-repeat;
+                    background-position: 0% 0%;
+                }
+
+                .price {
+                    font-size: 25px;
+                    color: #2d3940;
+                    font-weight: 700;
+                    margin-top: 20px;
+                }
+
+                .title {
+                    font-size: 21px;
+                    font-weight: 400;
+                    max-width: 140px;
+                }
+            }
+        }
+
+        &-bottom {
+            position: relative;
+
+            &:before {
+                content: '';
+                background: #a5b3c5;
+                display: inline-block;
+                width: 200%;
+                height: 100%;
+                position: absolute;
+                right: 80px;
+                top: 0;
+                z-index: -1;
+            }
+
+            .item {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                padding-right: 12px;
+                position: relative;
+                height: 100px;
+                margin-bottom: 32px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    display: inline-block;
+                    top: 0;
+                    left: 0;
+                    overflow: hidden;
+                    z-index: -1;
+                    background: url("../img/aasortment2.png");
+                    background-repeat: no-repeat;
+                    background-position: 0% 0%;
+                    transform: scaleX(-1);
+                }
+
+                .price {
+                    font-size: 25px;
+                    color: #2d3940;
+                    font-weight: 700;
+                    margin-top: 20px;
+                }
+
+                .title {
+                    font-size: 21px;
+                    font-weight: 400;
+                    max-width: 140px;
+                }
+            }
         }
     }
 }
@@ -970,6 +1147,9 @@ section {
         flex-direction: column;
         align-items: flex-end;
         margin-bottom: 25px;
+        @include respond-to($xs-max) {
+            align-items: center;
+        }
     }
 
     &__title {
@@ -979,6 +1159,16 @@ section {
         max-width: 630px;
         text-align: left;
         width: 100%;
+        @include respond-to($small-max) {
+            font-size: 38px;
+            color: #2d3940;
+            opacity: .75;
+            font-weight: 500;
+        }
+        @include respond-to($xs-max) {
+            font-size: 33px;
+            max-width: 290px;
+        }
     }
 
     &__sub-title {
@@ -989,12 +1179,62 @@ section {
         text-align: left;
         max-width: 630px;
         width: 100%;
+        @include respond-to($small-max) {
+            font-size: 38px;
+            color: #2d3940;
+        }
+        @include respond-to($xs-max) {
+            font-size: 33px;
+            max-width: 290px;
+        }
     }
 
     &__gallery {
         display: flex;
         flex-wrap: wrap;
         margin-right: -200px;
+
+        &.desctop {
+            @include respond-to($small-max) {
+                display: none;
+            }
+        }
+        &.mobile {
+            display: none;
+            @include respond-to($small-max) {
+                display: flex;
+                //flex-direction: column;
+                max-width: 580px;
+                margin: 0 auto;
+
+            }
+            @include respond-to($xs-max) {
+                flex-direction: column;
+                max-width: 290px;
+            }
+        }
+
+        &-img {
+            margin-bottom: 26px;
+            margin-right: 20px;
+            @include respond-to($xs-max) {
+                margin-right: 0;
+            }
+
+        }
+        &-btn {
+            display: flex;
+            flex-direction: column;
+            .btn-link {
+                font-size: 21px;
+                color: #2d3940;
+                text-decoration: none;
+                margin-bottom: 10px;
+
+            }
+        }
+ 
+
 
         &-item {
             position: relative;
@@ -1010,7 +1250,9 @@ section {
                 margin-left: -84px;
                 position: relative;
                 z-index: 4;
-
+                @include respond-to($medium) {
+                    margin-left: -200px;
+                }
                 .text {
                     position: absolute;
                     top: 153px;
@@ -1125,6 +1367,9 @@ section {
     &__content {
         padding: 0 0 0 120px;
         margin-bottom: 98px;
+        @include respond-to($small-max) {
+            padding: 0;
+        }
     }
 
     &__slider {
@@ -1168,6 +1413,9 @@ section {
     &__wrap {
         display: flex;
         padding: 0 60px;
+        @include respond-to($small-max) {
+            flex-direction: column;
+        }
     }
 
     &__form {
@@ -1175,6 +1423,12 @@ section {
         flex-direction: column;
         width: 300px;
         margin-right: 75px;
+        @include respond-to($medium) {
+            margin-right: 25px;
+        }
+        @include respond-to($small-max) {
+            margin-right: 0;
+        }
 
         .label {
             display: inline-block;
@@ -1263,9 +1517,13 @@ section {
     }
 
     &__aboutUs {
+        width: 100%;
         &-img {
             height: 308px;
             margin-bottom: 60px;
+            @include respond-to($small-max) {
+                display: none;
+            }
             img {
                 height: 100%;
                 width: 100%;
@@ -1283,6 +1541,68 @@ section {
             border-left-color: #9aa3a6;
             padding: 24px 50px;
             text-decoration: none;
+            @include respond-to($small-max) {
+                text-align: center;
+            }
+        }
+
+        &-info {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 300px;
+            margin: 50px auto;
+
+            &:before {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                width: 250px;
+                height: 200px;
+                background: url("../img/about-us-top.png");
+                background-position: 0% 0;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: -30px;
+                left: 0;
+                z-index: -1;
+            }
+
+            &:after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                width: 250px;
+                height: 200px;
+                background: url("../img/about-us-bottom.png");
+                background-position: 100% 0;
+                background-repeat: no-repeat;
+                position: absolute;
+                bottom: -30px;
+                right: 0;
+                z-index: -1;
+            }
+            .item {
+                font-size: 21px;
+                font-weight: 400;
+                color: #2d3940;
+                display: inline-block;
+                width: 100%;
+                padding-left: 15px;
+                
+                &:nth-child(2) {
+                    text-align: right;
+                    padding-right: 15px;
+                }
+            }
+        }
+
+        &-descr {
+            font-size: 38px;
+            color: #2d3940;
+            font-weight: 500;
+            opacity: .3;
+            text-align: center;
         }
     }
 }
