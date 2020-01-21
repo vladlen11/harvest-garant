@@ -61,14 +61,17 @@
 }
 
 .slick-next {
-    //right: 27px;
     transform: translateX(350px) ;
+    @include respond-to($medium) {
+        transform: translateX(280px) ;
+    }
 }
 
 .slick-prev {
     transform: translateX(-350px) ;
-    //left: auto;
-    //right: 73px;
+    @include respond-to($medium) {
+        transform: translateX(-320px) ;
+    }
 }
 
 .c_slider {

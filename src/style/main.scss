@@ -1518,27 +1518,31 @@ section {
     }
 
     &__slider {
+        width: 100%;
+        margin: 0 auto 82px;
         @include respond-to($small-max) {
             display: none;
         }
-        //max-width: 900px;
-        width: 100%;
-        margin: 0 auto 82px;
 
         .item {
             position: relative;
+
             &__title {
                 font-size: 50px;
                 font-weight: 900;
                 position: absolute;
                 top: 44px;
             }
+
             &__text {
                 font-size: 25px;
                 padding: 130px 250px 50px;
                 margin: 0 60px;
                 background: #a5b4c6;
                 text-align: left;
+                @include respond-to($medium) {
+                    padding: 130px 130px 50px;
+                }
                 p {
                     text-align: left;
                 }
@@ -1820,19 +1824,31 @@ section {
         .text {
             font-size: 21px;
             font-weight: 300;
-            margin-bottom: 20px;
+            max-width: 400px;
+            margin: 0 auto 20px;
         }
     }
 }
 
 .gallery {
     margin-bottom: 80px;
+    @include respond-to($xs-max) {
+        margin-bottom: 20px;
+    }
 
     &__row {
         display: flex;
         justify-content: space-between;
         margin-bottom: 32px;
         padding: 0 30px;
+        @include respond-to($small) {
+            margin-bottom: 20px;
+        }
+        @include respond-to($xs-max) {
+           flex-direction: column;
+            margin-bottom: 0;
+            padding: 0;
+        }
 
         &-wrap {
             display: flex;
@@ -1841,6 +1857,59 @@ section {
         }
 
         .item {
+            position: relative;
+            overflow: hidden;
+            background: #fff;
+            @include respond-to($xs-max) {
+                margin-bottom: 30px;
+            }
+            &.translucent {
+                opacity: .4;
+                @include respond-to($xs-max) {
+                    opacity: 1;
+                }
+            }
+
+            &.tall {
+                @include respond-to($medium) {
+                    margin: 0 30px;
+                }
+                @include respond-to($small) {
+                    margin: 0 20px;
+                }
+            }
+            &.big {
+                @include respond-to($medium) {
+                    margin-left: 30px;
+                }
+                @include respond-to($small) {
+                    margin-left: 20px;
+                }
+            }
+            .empty {
+                display: inline-block;
+
+                &.desctop {
+                    @include respond-to($xs-max) {
+                        display: none;
+                    }
+                }
+                &.mobile {
+                    display: none;
+                    @include respond-to($xs-max) {
+                        display: block;
+                    }
+                }
+            }
+
+            .picture {
+                position: absolute;
+                left: 0;
+                top: 0;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
 
             img {
                 width: 100%;
