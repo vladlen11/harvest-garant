@@ -38,3 +38,30 @@ textarea.focusout(function(){
     $('.textarea-wrap').removeClass('not-empty');
 });
 
+$(function(){
+    var logo = $('.hero__content-logo');
+    var logoHeight = logo.height();
+    var topPos = logo.offset().top; //topPos - это значение от верха блока до окна браузера
+
+    var fixed;
+    console.log(logo, 'topPos');
+    console.log(logoHeight, 'logoHeight');
+
+    $(window).scroll(function() {
+        var top = $(document).scrollTop();
+
+        if (top >= topPos) {
+            fixed = true;
+        }
+        else  {
+            fixed = false
+
+        }
+        if(fixed) {
+            logo.addClass('fixed');
+        } else {
+            logo.removeClass('fixed');
+        }
+
+    });
+});
