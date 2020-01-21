@@ -62,6 +62,5 @@ $(function(){
         } else {
             logo.removeClass('fixed');
         }
-
     });
 });

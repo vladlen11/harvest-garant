@@ -36,7 +36,6 @@ a {
 
 section {
     overflow: hidden;
-    //border: 1px solid red;
 }
 
 .hero {
@@ -1279,6 +1278,9 @@ section {
         left: 0;
         right: 0;
         z-index: -1;
+        @include respond-to($small-max) {
+            display: none;
+        }
     }
 
     &__head {
@@ -1686,7 +1688,6 @@ section {
 
     &__aboutUs {
         width: 100%;
-        display: none;
         @include respond-to($small-max) {
             display: flex;
             flex-direction: column;
