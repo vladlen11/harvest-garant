@@ -1158,7 +1158,6 @@ section {
             }
 
             &:nth-child(3) {
-                background: rgba(255,255,255,.12);
                 position: relative;
                 &::before {
                     content: '';
@@ -1170,10 +1169,10 @@ section {
                     left: 0;
                     overflow: hidden;
                     z-index: 0;
-                    background: url("../img/setka-bg-1.png");
+                    background: url("../img/setka-bg-1.jpg");
                     background-size: cover;
                     background-repeat: no-repeat;
-                    opacity: .4;
+                    opacity: .12;
                 }
 
 
